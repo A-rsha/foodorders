@@ -2,9 +2,14 @@ import React from 'react'
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import './FoodCard.css'
+import { addFoodToCart } from '../features/cart/cartSlice';
+import { useDispatch } from 'react-redux';
+
+addFoodToCart
 
 function FoodCard() {
-
+    const dispatch = useDispatch();
+const addToCart = (item) => dispatch(addFoodToCart(item));
     return (
         <div>
             <h1 className='heading'>Featured Foods</h1>
@@ -17,7 +22,7 @@ function FoodCard() {
                             Foodify. special tasty Caramel Dessert<br />
                             price:₹179
                         </Card.Text>
-                        <Button variant="primary" className='button'>Add to Cart</Button>
+                        <Button variant="primary" className='button' onClick={() => addToCart({  id: 6, name: "Caramel Dessert", category: "Dessert", Image: "/catImg/caramel.jpg", price: 179 })}>Add to Cart</Button>
                     </Card.Body>
                 </Card>
                 <Card style={{ width: '18rem' }}>
@@ -28,7 +33,7 @@ function FoodCard() {
                            Extra cheese with a soft juicy patty.<br />
                             price:₹359
                         </Card.Text>
-                        <Button variant="primary" className='button'>Add to Cart</Button>
+                        <Button variant="primary" className='button'   onClick={() => addToCart({ id: 5, name: "Chees Burger", category: "Burger", Image: "/catImg/cheeseburg.jpg", price: 349 })}>Add to Cart</Button>
                     </Card.Body>
                 </Card>
                 <Card style={{ width: '18rem' }}>
@@ -39,7 +44,7 @@ function FoodCard() {
                             Bell peppers, olives, sweet corn & onions.<br />
                             price:₹249
                         </Card.Text>
-                        <Button variant="primary" className='button'>Add to Cart</Button>
+                        <Button variant="primary" className='button'  onClick={() => addToCart(items)}>Add to Cart</Button>
                     </Card.Body>
                 </Card>
                 <Card style={{ width: '18rem' }}>
@@ -50,7 +55,7 @@ function FoodCard() {
                             Middle-east style falafel + hummus + veggies.<br />
                             price:₹289
                         </Card.Text>
-                        <Button variant="primary" className='button'>Add to Cart</Button>
+                        <Button variant="primary" className='button'   onClick={() => addToCart(items)}>Add to Cart</Button>
                     </Card.Body>
                 </Card>
                  <Card style={{ width: '18rem' }}>
@@ -61,7 +66,7 @@ function FoodCard() {
                            Thick shake with real chocolate milkshake.<br />
                             price:₹190
                         </Card.Text>
-                        <Button variant="primary" className='button'>Add to Cart</Button>
+                        <Button variant="primary" className='button'   onClick={() => addToCart( { id: 10, name: "Chocolate Milkshake", category: "Drinks", Image: "/catImg/shake.jpg", price: 190 })}>Add to Cart</Button>
                     </Card.Body>
                 </Card>
                     <Card style={{ width: '18rem' }}>
@@ -72,7 +77,7 @@ function FoodCard() {
                             Apples, pineapple, watermelon, grapes with honey.<br />
                             price:₹299
                         </Card.Text>
-                        <Button variant="primary" className='button'>Add to Cart</Button>
+                        <Button variant="primary" className='button'   onClick={() => addToCart( { id: 7, name: "Fruit salad", category: "Salads", Image: "/catImg/fruit.jpg", price: 179 })}>Add to Cart</Button>
                     </Card.Body>
                 </Card>
             </div>

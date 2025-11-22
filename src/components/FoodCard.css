@@ -22,10 +22,11 @@
     height: 200px;
     border-radius: 15px;
     object-fit: cover;
+    object-position: center 10%;
     display: block;
-    margin: 0 auto;
+    margin: 10px auto 0 auto;
     cursor: pointer;
-   padding-top: 15%;
+   
 }
 
 .h1{

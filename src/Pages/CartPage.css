@@ -1,134 +1,147 @@
-.cartpage{
-padding: 20px;
-max-width: 800px;
-margin: auto;
-color:rgb(155, 68, 5); 
+.cartpage {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+    color: rgb(155, 68, 5);
 }
-.head{
-    
+
+.empty {
+    color: rgb(155, 68, 5);
+    font-size: 13px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    margin: 30px;
 }
-.empty{
-color:rgb(155, 68, 5); 
-font-size: 13px;
-font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-text-align: center;
-margin: 30px;
+
+.cartitem {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
-.cartitem{
-display: flex;
-flex-direction: column;
-gap: 15px;
+
+.cartid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color:wheat;
 }
-.cartid{
-display: flex;
-justify-content: space-between;
-align-items: center;
-padding: 10px;
-border: 1px solid #ddd;
-border-radius: 10px;
-background-color: rgb(231, 153, 98);
+
+.itemleft {
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
-.itemleft{
-display: flex;
-align-items: center;
-gap: 15px;
-}
-.itemimg{
+
+.itemimg {
     width: 100px;
     height: 100px;
     object-fit: cover;
     border-radius: 10px;
 }
-.itemright{
-display: flex;
-align-items: center;
-gap: 10px;
-justify-content: flex-start;
+
+.itemright {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: flex-start;
 }
-.qty1btn{
-width: 30px;
-height: 30px;
-border: none;
-background-color: rgb(222, 129, 24);
-color:rgb(155, 68, 5); 
-border-radius: 50%;
-cursor: pointer;
+
+.qty1btn {
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: rgb(222, 129, 24);
+    color: rgb(155, 68, 5);
+    border-radius: 50%;
+    cursor: pointer;
 }
-.qty2btn{
-width: 30px;
-height: 30px;
-border: none;
-background-color: rgb(197, 116, 17);
-color:rgb(155, 68, 5); 
-border-radius: 50%;
-cursor: pointer;
+
+.qty2btn {
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: rgb(197, 116, 17);
+    color: rgb(155, 68, 5);
+    border-radius: 50%;
+    cursor: pointer;
 }
-.removebtn{
-background-color: rgb(213, 3, 3);
-color:rgb(16, 16, 16); 
-border: none;
-padding: 5px 10px;
-border-radius: 5px;
-cursor: pointer;
-margin-top: 5px;
+
+.removebtn {
+    background-color: rgb(213, 3, 3);
+    color: rgb(16, 16, 16);
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 5px;
 }
-.carttotal{
-margin-top: 20px;
-display: flex;
-justify-content: space-between;
-align-items: center;
+
+.carttotal {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
 }
-.btnwrap{
-display: flex;
-justify-content: space-between;
-align-items: center;
-margin-bottom: 20px;
+
+.btnwrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
 
 }
-.clearbtn{
- 
+
+.clearbtn {
+
     float: right;
     margin-left: auto;
-align-items: end;
-top: -15px;
-  padding: 10px 12px;
+    align-items: end;
+    top: -15px;
+    padding: 10px 12px;
     font-size: 13px;
     border-radius: 6px;
-    width :120px;
-    background-color: rgb(231, 153, 98);
-    color:rgb(107, 46, 3);
-    border: none; 
+    width: 120px;
+    background-color:wheat;
+    font-weight: bold;
+    color: rgb(155, 68, 5);
+    border: none;
 }
-.orderbtn{
-    padding: 10px 15px;
-    font-size: 13px;
+
+.orderbtn {
+    padding: 20px 15px;
+    font-size: 16px;
     border-radius: 6px;
     display: flex;
     justify-content: center;
-   
+font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+font-weight: bold;
     border: none;
-    background-color: rgb(231, 153, 98);
-    color:rgb(107, 46, 3); 
+    background-color:wheat;
+    color: rgb(66, 30, 3);
     cursor: pointer;
 }
 
 @media (max-width: 600px) {
-    .cartid{
+    .cartid {
         flex-direction: column;
         align-items: flex-start;
     }
 
-.itemright{
-align-self: flex-end;
-flex-direction: row;
-justify-content: flex-start;
-gap: 5px;
-width: auto;
-}
-.carttotal{
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-}
+    .itemright {
+        align-self: flex-end;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 5px;
+        width: auto;
+    }
+
+    .carttotal {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
 }

@@ -12,7 +12,7 @@ function FoodCard() {
 const addToCart = (item) => dispatch(addFoodToCart(item));
     return (
         <div>
-            <h1 className='heading'>Featured Foods</h1>
+            <h1 className='fheading'>Featured Foods</h1>
             <div className='cardcontainer'>
                 <Card style={{ width: '18rem' }}>
                     <Card.Img variant="top" src="/catImg/caramel.jpg" width={200} className='images' />

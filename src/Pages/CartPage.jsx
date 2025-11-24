@@ -5,6 +5,7 @@ import { plusFood } from '../features/cart/cartSlice'
 import { minusFood } from '../features/cart/cartSlice'
 import { dltFood } from '../features/cart/cartSlice'
 import './CartPage.css'
+import { useNavigate } from 'react-router-dom'
 
 function CartPage() {
     const cart = useSelector(state => state.cartReducer.value)
@@ -12,6 +13,10 @@ function CartPage() {
     const total = cart.reduce(
         (sum, item) => sum + item.price * item.quantity, 0
     )
+    const navigate = useNavigate();
+    const handleCheckout=()=>{
+        navigate('/order-summary')
+    }
     return (
         <div className='cartpage'>
             <h1 className='head'>shopping Cart</h1>
@@ -44,7 +49,7 @@ function CartPage() {
                                             <h2 className='carttotal'>Total:₹{total}</h2>
                       <button onClick={() => dispatch(removeFood())} className='clearbtn'>Clear Cart</button>
                     </div>
-                    <button className='orderbtn'>Place Order</button>
+                    <button  className='orderbtn' onClick={handleCheckout}>checkout</button>
 
                 </div>
             )}

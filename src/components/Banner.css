@@ -9,7 +9,7 @@
     align-items: center;
     justify-content: flex-end;
     padding-right: 80px;
-    border-radius: 40px;
+    border-radius: 30px;
 }
 
 .banner-content {
@@ -39,6 +39,7 @@
 
 .button {
     padding: 8px 16px;
+   
     cursor: pointer;
     border: none;
     background-color: rgb(219, 110, 32);
@@ -76,18 +77,18 @@
 
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 600px) {
     .banner {
-        justify-content: center;
-        padding: 0 5%;
+        justify-content: right;
+          padding-right: 250px;
         height: 70vh;
         border-radius: 20px;
     }
 
     .banner-content {
-        align-items: center;
-        text-align: center;
-        gap: 6px;
+        align-items: right;
+        text-align: right;
+        gap: 8px;
     }
  .head1 {
         font-size: 50px;
@@ -100,5 +101,6 @@
      .button {
         font-size: 16px;
         padding: 8px 16px;
+        margin-top: -10px;
     }
 }

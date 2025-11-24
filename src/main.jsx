@@ -15,6 +15,7 @@ import MenuPage from './Pages/MenuPage.jsx';
 import CartPage from './Pages/CartPage.jsx';
 import AboutPage from './Pages/AboutPage.jsx';
 import ContactPage from './Pages/ContactPage.jsx';
+import OrderSummary from './Pages/OrderSummary.jsx';
 
 const router = createBrowserRouter([
   {
@@ -26,7 +27,9 @@ const router = createBrowserRouter([
       { path: "/Menu", element: <MenuPage /> },
       { path: "/Cart", element: <CartPage /> },
       { path: "/About", element: <AboutPage /> },
-            { path: "/Contact", element: <ContactPage /> },
+      { path: "/Contact", element: <ContactPage /> },
+      { path: "/order-summary", element: <OrderSummary /> },
+
     ]
 
   }

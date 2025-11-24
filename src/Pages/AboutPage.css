@@ -1,0 +1,175 @@
+.aboutcontainer{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 40px;
+    margin-top: 50px;
+    padding: 20px;
+}
+.aboutimg{
+margin-top: 40px;
+border-radius: 4%;
+width: 400px;
+display: block;
+}
+.hcontainer{
+      padding-top: 30px; 
+       display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.h1a{
+font-size: 48px;
+color: rgb(209, 91, 6);
+top: -10px;
+}
+.h2a{
+font-size: 25px;
+color: rgb(136, 67, 17);
+}
+.h3a{
+font-size: 20px;
+color: rgb(136, 67, 17);
+}
+.leftside{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;     
+    display: inline-block ;
+}
+.contactBox{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 200px;
+    padding: 15px;
+  background-color: rgba(0,0,0,0.6);
+       border-radius: 8px;
+color: aliceblue;
+  font-size: 16px;
+}
+.contactBox div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px; 
+}.contactBox div:last-child {
+    margin-bottom: 0; 
+}
+.about2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 50px;
+  padding: 40px 0;
+   
+}
+
+.rightimg img {
+    margin-top: -250px;
+  width: 700px;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+
+.lefttxt{
+   margin-top: -120px;
+    display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 450px;
+ 
+}
+.lefttxt h1 {
+  font-size: 35px;
+  font-weight: 700;
+  color: rgb(209, 91, 6);
+}
+.lefttxt p {
+  font-size: 20px;
+  line-height: 1.6;
+  color: rgb(152, 66, 4);
+}
+.left1 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2×2 layout like sample */
+  gap: 20px;
+  max-width: 350px;
+}
+
+.left1 p {
+  background:wheat;
+  color: rgb(152, 66, 4);
+  padding: 20px;
+  width: 115px;
+  height: 120px;
+  border-radius: 12px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+@media (max-width: 768px) {
+ 
+    .aboutContainer {
+    flex-direction: column; 
+    gap: 15px;
+  }
+  .aboutimg{
+    width: 100%;
+    margin-top: -20px;
+  }
+  .h1a{
+    font-size: 26px;
+    margin-top: -30px;
+  }
+.h2a{
+  font-size: 20px;
+}
+  .leftSide {
+    align-items: center;
+  }
+
+  .contactBox {
+    width: 90%; 
+  }
+  .about2 {
+      flex-direction: column; 
+    gap: 15px; /* image bottom-left, text top-right */
+    text-align: center;
+  }
+
+  .rightimg img {
+    width: 100%;
+    margin-top: -100px;
+  }
+
+  .left1 {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 20px auto;
+   
+  }
+  .lefttxt{
+   margin-top: 20px;
+  }
+   .lefttxt h1{
+    font-size: 23px;
+   }
+   .lefttxt p{
+    font-size: 16px;
+   }
+   .left1 p{
+    margin-top: -20px;
+    font-size: 14px;
+     width: 100px;
+  height: 100px;
+   }
+
+
+}
+
+

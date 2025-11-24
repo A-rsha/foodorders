@@ -1,0 +1,41 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal {
+  background: wheat;
+  padding: 30px 40px;
+  border-radius: 12px;
+  width: 300px;
+  text-align: center;
+  animation: pop 0.3s ease;
+}
+.successicon{
+  width: 80px;
+  margin-bottom: 15px;
+
+}
+
+@keyframes pop {
+  0% { transform: scale(0.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.closebtn {
+  background: #ff5722;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin-top: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+}

@@ -10,7 +10,7 @@ function Banner() {
         <p className='para'>Your favorite food, just a click away.<br/>
         Fresh. Fast. Flavourful</p>
        <Link to="/Menu" className='button'>Order Now</Link>
-    </div>
+     </div>
     </div>
   )
 }

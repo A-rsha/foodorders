@@ -22,10 +22,22 @@
 .categorycont > div:hover{
     transform: scale(1.05);
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 767px) {
   .categorycont {
     grid-template-columns: repeat(2, 1fr);
+    margin-left: 40px;
   }
+  .categorycont >div{
+    text-align: center;
+    cursor: pointer;
+    transition: transfrom 0.3 ease;
+}
+.categorycont > div:hover{
+    transform: scale(1.05);
+}
+.heading{
+    margin-left: 175px;
+}
 }
 
 .foodimg{

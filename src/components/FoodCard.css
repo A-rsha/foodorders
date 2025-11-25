@@ -15,10 +15,12 @@
 @media screen and (max-width: 1024px) {
   .cardcontainer {
     grid-template-columns: repeat(2, 1fr);
+    margin-right: 20px;
   }
 }
 .fheading{
-    text-align: center;
+    
+    margin-left: 175px;
 }
 .images{
     width: 200px;

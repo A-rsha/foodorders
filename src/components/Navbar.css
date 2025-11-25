@@ -4,7 +4,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 18px 40px;
+  padding: 18px 38px;
   background-color: wheat;
   position: sticky;
   top: 0;
@@ -17,7 +17,7 @@
   font-size: 28px;
   font-weight: 700;
   color: rgb(219, 110, 32);
-  margin: 0;
+  
 }
 
 /* NAV LINKS */
@@ -48,6 +48,7 @@
   cursor: pointer;
   font-size: 18px;
   transition: 0.3s ease;
+  margin-right: 15px;
 }
 
 .toggle-btn:hover {
@@ -73,36 +74,23 @@ body.dark-mode .toggle-btn {
 }
 
 /* RESPONSIVE */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .navbar {
-    padding: 15px 20px;
+    padding: 15px 125px;
   }
 
   .nav-links {
     gap: 15px;
+    margin-left: 15px;
   }
 
   .logo {
-     margin-left: 0; 
+    margin-right: 30px; 
     font-size: 24px;
   }
-}
-
-@media (max-width: 480px) {
-  .navbar{
-    padding: 15px 120px;
-     width: 100%;
-  
-  }
-  .nav-links {
-    
-  gap: 25px;/* you can later add hamburger menu */
-  }
-
-  .logo {
-      margin-left: 0; 
-    font-size: 22px;
-    text-align: left;
-  
+  .toggle-btn{
+    margin-right:30px ;
   }
 }
+
+

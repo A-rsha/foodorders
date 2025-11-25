@@ -24,6 +24,132 @@
   margin-bottom: 15px;
 
 }
+.location-heading {
+  margin-bottom: 8px;
+}
+
+.location-display {
+  position: relative;
+  padding-right: 30px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 8px;
+  background: #fafafa;
+}
+
+.location-text {
+  display: inline-block;
+  max-width: calc(100% - 30px);
+  word-break: break-word;
+}
+
+.edit-icon {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  cursor: pointer;
+  color: #555;
+}
+
+.address-edit textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.save-cancel-btns {
+  margin-top: 8px;
+  display: flex;
+  gap: 10px;
+}
+
+.save-btn,
+.cancel-btn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.save-btn {
+  background-color: #4caf50;
+  color: white;
+}
+
+.cancel-btn {
+  background-color: #f44336;
+  color: white;
+}
+
+.small-btn {
+  margin-top: 8px;
+  padding: 6px 10px;
+  font-size: 14px;
+}
+.payment-method-box {
+  margin-top: 20px;
+  padding: 15px;
+  background: #f3f3f3;
+  border-radius: 8px;
+}
+
+.payment-method-box h3 {
+  margin-bottom: 10px;
+}
+
+.payment-method-box label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.payment-method-box input[type="radio"] {
+  margin-right: 8px;
+}
+
+
+.carttotal {
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.orderbtn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  background-color: #ff5722;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.orderbtn:hover {
+  background-color: #e64a19;
+}
+
+/* Google Maps container */
+.gmap-container {
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+
+.address-box input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
 
 @keyframes pop {
   0% { transform: scale(0.8); opacity: 0; }

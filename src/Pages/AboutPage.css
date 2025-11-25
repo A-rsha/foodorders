@@ -118,6 +118,7 @@ color: aliceblue;
     .aboutContainer {
     flex-direction: column; 
     gap: 15px;
+    margin-left: 50px;
   }
   .aboutimg{
     width: 100%;

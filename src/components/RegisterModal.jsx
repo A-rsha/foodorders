@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./modal.css";
+import "./Modal.css";
 
 function RegisterModal({ close, openLogin }) {
   const [name, setName] = useState("");

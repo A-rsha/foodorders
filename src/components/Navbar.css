@@ -1,29 +1,29 @@
-/* RESET ONLY NAVBAR, NOT GLOBAL */
 .navbar {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 18px 38px;
-  background-color: wheat;
+  background-color: rgb(242, 242, 242);
   position: sticky;
   top: 0;
   z-index: 999;
   border-bottom: 2px solid #e2c49f;
 }
 
-/* LOGO */
+
 .logo {
   font-size: 28px;
   font-weight: 700;
   color: rgb(219, 110, 32);
-  
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-/* NAV LINKS */
+/* Nav links */
 .nav-links {
   display: flex;
   gap: 25px;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
 }
 
 .nav-links a {
@@ -37,25 +37,75 @@
 .nav-links a:hover {
   color: #ff6600;
 }
+.login-btn {
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+  margin-left: 15px;
+}
 
-/* TOGGLE BUTTON */
-.toggle-btn {
+.login-btn:hover {
+  color: #ff7a00;
+}
+
+
+
+.toggle-btn,
+.hamburger-btn {
   background-color: rgb(219, 110, 32);
   color: white;
-  padding: 8px 12px;
+  padding: 8px 10px;
   border: none;
   border-radius: 6px;
   cursor: pointer;
   font-size: 18px;
   transition: 0.3s ease;
-  margin-right: 15px;
+  margin-right: 40px;
 }
 
-.toggle-btn:hover {
+.toggle-btn:hover,
+.hamburger-btn:hover {
   background-color: #1b1a19;
 }
 
-/* DARK MODE : affects only navbar */
+.user-btn {
+  font-size: 24px;
+  cursor: pointer;
+  margin-left:5px 5px;
+  text-decoration: none;
+  background-color:wheat;
+}
+
+.user-popup {
+  position: absolute;
+  top: 70px;
+  right: 80px;
+  background: white;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 999;
+}
+
+.user-popup button {
+  padding: 8px 15px;
+  border: none;
+  background: #ff7b00;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.user-popup button:hover {
+  background: #e46a00;
+}
+
+
+
 body.dark-mode {
   background-color: #121212;
   color: white;
@@ -73,24 +123,47 @@ body.dark-mode .toggle-btn {
   background-color: rgb(219, 110, 32);
 }
 
-/* RESPONSIVE */
+
+
 @media (max-width: 767px) {
-  .navbar {
-    padding: 15px 125px;
+  .navbar{
+    position: sticky;
+  top: 0;
+    padding: 0 10px;
   }
-
   .nav-links {
-    gap: 15px;
-    margin-left: 15px;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background-color: rgb(152, 90, 52);
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
   }
 
-  .logo {
-    margin-right: 30px; 
-    font-size: 24px;
+  .nav-links.active {
+    max-height: 500px;
+    opacity: 1;
   }
-  .toggle-btn{
-    margin-right:30px ;
+
+  .nav-links a {
+    padding: 12px 20px;
+    border-top: 1px solid #e2c49f;
+  }
+   .toggle-btn{
+     margin-right: 65px;
+   }
+  .hamburger-btn {
+    display: block;
+    margin-left: 90px;
   }
 }
 
 
+@media (min-width: 768px) {
+  .hamburger-btn {
+    display: none;
+  }
+}

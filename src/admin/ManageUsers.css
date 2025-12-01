@@ -1,0 +1,55 @@
+.manage-users-container {
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.manage-users-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #e67e22;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+/* Empty message */
+.no-users {
+  text-align: center;
+  color: #888;
+  font-size: 18px;
+}
+
+/* Grid list */
+.admin-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 15px;
+}
+
+/* User card */
+.item-card {
+  background: #fff;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  transition: 0.3s;
+  border-left: 6px solid #e67e22;
+}
+
+.item-card:hover {
+  transform: scale(1.02);
+}
+
+/* Name */
+.item-card h4 {
+  margin: 0;
+  font-size: 20px;
+  color: #333;
+  font-weight: 600;
+}
+
+/* Email */
+.item-card p {
+  margin: 5px 0;
+  color: #666;
+}

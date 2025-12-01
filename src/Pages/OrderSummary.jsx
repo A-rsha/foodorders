@@ -4,7 +4,9 @@ import { FaPencilAlt } from "react-icons/fa"; // react-icons install ചെയ�
 import "./OrderSummary.css";
 import "./CartPage.css";
 
+
 function OrderSummary() {
+
   const cart = useSelector((state) => state.cartReducer.value);
   const [showModal, setShowModal] = useState(false);
 
@@ -59,6 +61,25 @@ function OrderSummary() {
       alert("Please enter your address before placing order!");
       return;
     }
+    const loggedUser = JSON.parse(localStorage.getItem("loggedUser")) || {email:"Guest"};
+    const orderData = {
+    id: Date.now(),
+    items:cart, // unique order id
+    address: address,
+    total: total,
+    paymentMethod:paymentMethod,
+    user: loggedUser.email,
+  };
+  let allOrders = JSON.parse(localStorage.getItem("orders")) || [];
+  allOrders.push(orderData);
+  localStorage.setItem("orders", JSON.stringify(allOrders));
+
+  setShowModal(true);
+
+  // auto redirect after 2 seconds
+  setTimeout(() => {
+    window.location.href = "/orderhistory";
+  }, 2000);
 
     if(!paymentMethod){
         alert("Please select a payment method!");
@@ -67,6 +88,7 @@ function OrderSummary() {
     console.log("Placing order with payment method:",paymentMethod);
     setShowModal(true);
   };
+
 
   return (
     <div className="cartpage">
@@ -80,7 +102,8 @@ function OrderSummary() {
               <img src={item.Image} width={120} alt={item.name} />
               <div>
                 <h3>{item.name}</h3>
-                <p>Subtotal: ₹{item.price}</p>
+                <p>{item.price}x{item.quantity}</p>
+                <p>subTotal:₹{total}</p>
                 
               </div>
             </div>
@@ -186,9 +209,13 @@ function OrderSummary() {
             <img src="catImg/success.png" className="successicon" />
             <h2>Order Placed Successfully 🎉</h2>
             <p>Your food is on the way!</p>
-            <button className="closebtn" onClick={() => setShowModal(false)}>
-              Close
-            </button>
+           <button className="closebtn" onClick={() => {
+    setShowModal(false);
+    window.location.href = "/orderhistory";
+}}>
+  Close
+</button>
+
           </div>
         </div>
       )}

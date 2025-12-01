@@ -7,31 +7,36 @@
 }
 .cardcontainer{
      grid-template-columns: repeat(3,1fr);
-    gap: 10px;
+    gap: 8px;
     display: grid;
     text-align: center;
-    margin-left: 10%;
+    
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 767px) {
   .cardcontainer {
-    grid-template-columns: repeat(2, 1fr);
-    margin-right: 20px;
+    grid-template-columns: repeat(1, 1fr);
+   
+    padding: 10px 40px;
+    
   }
 }
 .fheading{
     
-    margin-left: 175px;
+    margin-left: 5px;
 }
 .images{
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
     border-radius: 15px;
     object-fit: cover;
-    object-position: center 10%;
+    
     display: block;
-    margin: 10px auto 0 auto;
+    margin: 0 auto;
     cursor: pointer;
    
+}
+.cardbody{
+    margin-right: 20px;
 }
 
 .h1{
@@ -42,11 +47,12 @@
 }
 .cardtext{
 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-font-size: 20px;
+font-size: 18px;
 margin-top: -2px;
 color: rgb(155, 68, 5) ;
 }
 
 .button{
     margin-top: -20px;
+   
 }

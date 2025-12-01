@@ -1,4 +1,4 @@
-.container {
+.mcontainer {
      grid-template-columns: repeat(4,1fr);
     gap: 10px;
     display: grid;
@@ -23,11 +23,32 @@
 }
 
 .cart-count {
-    font-weight: bold;
-    font-size: 20px;
-    color: rgb(155, 68, 5);
-    text-decoration: none;
+  margin-right: 150px;
+  position: relative;
+  display: inline-block;
+  font-size: 24px;
+  color: black;
+  text-decoration: none;
+  
 }
+
+.cart-badge {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background: rgb(255, 68, 0);
+  color: white;
+  font-size: 12px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  box-shadow: 0 0 2px rgba(0,0,0,0.5);
+}
+
 
 .menuhead {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -39,9 +60,9 @@
 }
 
 @media screen and (max-width: 767px) {
-    .container {
+    .mcontainer {
         grid-template-columns: repeat(2, 1fr);
-       margin-left: 75px;
+       margin-left: 30px;
     }
 }
 .topbar{
@@ -74,3 +95,9 @@
     margin: 0 auto;
     cursor: pointer;
 }
+.inputaea{
+    padding: 3px 6px;
+     width: 150px;
+     margin-left: -60px;
+}
+

@@ -1,0 +1,132 @@
+/* Full screen overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.65); /* darker transparent background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Modal container */
+.modal-box {
+  width: 100%;
+  max-width: 320px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+  padding: 30px 25px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  text-align: center;
+  gap: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Close button */
+.close-btn {
+  width: 90%;
+  padding: 8px 10px;
+  border-radius: 12px;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #555;
+  transition: color 0.2s;
+}
+
+.close-btn:hover {
+  color: #e18b51;
+}
+
+/* Modal heading */
+.modal-box h2 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+/* Input fields */
+.modal-box input {
+  width: 90%;
+  padding: 14px 16px;
+  font-size: 16px;
+  border-radius: 12px;
+  border: 1.5px solid #ccc;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.modal-box input:focus {
+  border-color: #ff6600;
+  box-shadow: 0 0 8px rgba(255,102,0,0.3);
+}
+
+/* Buttons */
+.modal-box button {
+  width: 90%;
+  padding: 8px 10px;
+  border-radius: 12px;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(90deg, #ff8800, #ff4400);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.modal-box button:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(90deg, #ff6600, #ff3300);
+}
+
+/* Switch text */
+.switch-text {
+  font-size: 14px;
+  color: #666;
+  margin-top: 10px;
+}
+
+.switch-text span {
+  color: #ff6600;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* Responsive for small screens */
+@media (max-width: 480px) {
+  .modal-box {
+    padding: 25px 20px;
+    border-radius: 16px;
+  }
+
+  .modal-box h2 {
+    font-size: 24px;
+  }
+
+  .modal-box input {
+    font-size: 15px;
+  }
+
+  .modal-box button {
+    font-size: 15px;
+  }
+}

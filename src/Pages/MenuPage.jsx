@@ -55,16 +55,16 @@ const foods = [
     <div >
       <div className='topbar'>
       <input className='inputaea' type="text" placeholder='Search Food...' value={searchText} onChange={(e) => setSearchText(e.target.value)} />
-      <Link to="/Cart" className="cart-count">🛒: {cart.length}</Link>
+      <Link to="/Cart" className="cart-count">🛒 {cart.length > 0 && <span className='cart-badge'>{cart.length}</span>}</Link>
       </div>
 
 
 
-      <div className='container'>
+      <div className='mcontainer'>
         {filteredfood.length > 0 ? (
           filteredfood.map(items => (
             <div key={items.id} className='itembody'>
-              <img src={items.Image} width={200} className='images' />
+              <img src={items.Image} width={200} className='foodimg' />
               <h3 className='item'>{items.name}</h3>
               <p className='price'>Price: ₹{items.price}</p>
               <Button

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
-import { FaPencilAlt } from "react-icons/fa"; // react-icons install ചെയ്‌ത് ഉപയോഗിക്കുക
+import { FaPencilAlt } from "react-icons/fa"; 
 import "./OrderSummary.css";
 import "./CartPage.css";
 
@@ -64,7 +64,7 @@ function OrderSummary() {
     const loggedUser = JSON.parse(localStorage.getItem("loggedUser")) || {email:"Guest"};
     const orderData = {
     id: Date.now(),
-    items:cart, // unique order id
+    items:cart,
     address: address,
     total: total,
     paymentMethod:paymentMethod,
@@ -73,10 +73,10 @@ function OrderSummary() {
   let allOrders = JSON.parse(localStorage.getItem("orders")) || [];
   allOrders.push(orderData);
   localStorage.setItem("orders", JSON.stringify(allOrders));
-
+   localStorage.setItem("lastOrder", JSON.stringify(orderData));
   setShowModal(true);
 
-  // auto redirect after 2 seconds
+
   setTimeout(() => {
     window.location.href = "/orderhistory";
   }, 2000);

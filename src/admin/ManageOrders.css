@@ -12,14 +12,14 @@
   font-weight: bold;
 }
 
-/* Empty message */
+
 .no-orders {
   text-align: center;
   color: #888;
   font-size: 18px;
 }
 
-/* Grid layout for order cards */
+
 .admin-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -40,7 +40,7 @@
   transform: scale(1.02);
 }
 
-/* Order ID */
+
 .item-card h4 {
   margin: 0;
   font-size: 14px;
@@ -48,14 +48,14 @@
   font-weight: bold;
 }
 
-/* Address, total */
+
 .item-card p {
   margin: 4px 0;
   color: #555;
   font-size: 13px;
 }
 
-/* Items list */
+
 .item-card ul {
   padding-left: 20px;
   margin-top: 5px;

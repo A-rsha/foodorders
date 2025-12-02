@@ -7,6 +7,8 @@ function OrderHistory() {
   if (!order) {
     return <h2>No previous orders found!</h2>;
   }
+  const orderDate = new Date(order.id).toLocaleString();
+    const deliveryTime = new Date(order.id + 30 * 60 * 1000).toLocaleString();
 
   return (
     <div className="order-history">
@@ -14,6 +16,9 @@ function OrderHistory() {
 
       <div className="order-box">
         <p><strong>Order ID:</strong> {order.id}</p>
+         <p><strong>Order Date:</strong> {orderDate}</p>
+                 <p><strong>Estimated Delivery:</strong> {deliveryTime}</p>
+
         <p><strong>Address:</strong> {order.address}</p>
         <p><strong>Total Amount:</strong> ₹{order.total}</p>
       </div>

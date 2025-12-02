@@ -12,21 +12,20 @@
   font-weight: bold;
 }
 
-/* Empty message */
+
 .no-users {
   text-align: center;
   color: #888;
   font-size: 18px;
 }
 
-/* Grid list */
+
 .admin-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 15px;
 }
 
-/* User card */
 .item-card {
   background: #fff;
   padding: 15px;
@@ -40,7 +39,7 @@
   transform: scale(1.02);
 }
 
-/* Name */
+
 .item-card h4 {
   margin: 0;
   font-size: 20px;
@@ -48,7 +47,7 @@
   font-weight: 600;
 }
 
-/* Email */
+
 .item-card p {
   margin: 5px 0;
   color: #666;

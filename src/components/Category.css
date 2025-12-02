@@ -40,9 +40,9 @@
 
 
 .foodimg{
-    width: 100%;        /* scales with parent div */
-    max-width: 150px;  /* optional max size */
-    height: auto;      /* maintain aspect ratio */
+    width: 100%;       
+    max-width: 150px;  
+    height: auto;     
     border-radius: 10px;
     object-fit: cover;
     display: block;

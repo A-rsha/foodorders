@@ -16,6 +16,23 @@ function Navbar() {
 
   const loggedUser = JSON.parse(localStorage.getItem("loggedUser"));
 
+ 
+
+  const openLogin = () => {
+    setShowRegister(false);
+    setShowProfile(false);
+    setShowLogin(true);
+  };
+
+  const openRegister = () => {
+    setShowLogin(false);
+    setShowProfile(false);
+    setShowRegister(true);
+  };
+
+  const closeLogin = () => setShowLogin(false);
+  const closeRegister = () => setShowRegister(false);
+
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768);
@@ -29,13 +46,19 @@ function Navbar() {
     if (loggedUser) {
       setShowProfile(true);
     } else {
-      setShowLogin(true);
+      openLogin(); 
     }
+  };
+
+  const handleLogout = () => {
+    localStorage.removeItem("loggedUser");
+    setShowProfile(false);
+    window.location.reload();
   };
 
   return (
     <nav className="navbar">
-      
+
       <h1 className="logo">Foodify.</h1>
 
       {isMobile && (
@@ -51,12 +74,11 @@ function Navbar() {
         <NavLink to="/About">About</NavLink>
         <NavLink to="/Contact">Contact</NavLink>
       </div>
-      
+
       <button className="user-btn" onClick={handleUserClick}>
         👤
       </button>
 
-      
       <button className="toggle-btn" onClick={() => {
         setDarkMode(!darkMode);
         document.body.classList.toggle("dark-mode");
@@ -64,25 +86,12 @@ function Navbar() {
         {darkMode ? "🌙" : "☀️"}
       </button>
 
-      
       {showLogin && (
-        <LoginModal
-          close={() => setShowLogin(false)}
-          openRegister={() => {
-            setShowLogin(false);
-            setShowRegister(true);
-          }}
-        />
+        <LoginModal close={closeLogin} openRegister={openRegister} />
       )}
 
       {showRegister && (
-        <RegisterModal
-          close={() => setShowRegister(false)}
-          openLogin={() => {
-            setShowRegister(false);
-            setShowLogin(true);
-          }}
-        />
+        <RegisterModal close={closeRegister} openLogin={openLogin} />
       )}
 
       {showProfile && (

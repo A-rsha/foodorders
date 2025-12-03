@@ -1,12 +1,18 @@
 import React, { useState } from "react";
 import "./Modal.css";
+import { useNavigate } from "react-router-dom";
+
 
 function RegisterModal({ close, openLogin }) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+   const [role, setRole] = useState("User");
+ 
+const navigate = useNavigate();
 
-  const handleRegister = () => {
+  const handleRegister = (e) => {
+    e?.preventDefault?.();
     if (!name || !email || !password) {
       alert("All fields required!");
       return;
@@ -21,16 +27,24 @@ function RegisterModal({ close, openLogin }) {
       return;
     }
 
-    users.push({ id:Date.now(), name, email, password });
-    localStorage.setItem("users", JSON.stringify(users));
+  const newUser = { id: Date.now(), name, email, password, role: role.toLowerCase() };
+  users.push(newUser);
+  localStorage.setItem("users", JSON.stringify(users));
+
+  localStorage.setItem("loggedUser", JSON.stringify(newUser));
+
 
     alert("Registration Successful!");
-    openLogin(); // Open login modal next
+    close && close(); 
+
+        if (role.toLowerCase() === "admin") navigate("/admin");
+    else navigate("/"); 
   };
+  const stop = (e) => e.stopPropagation();
 
   return (
-    <div className="modal-overlay">
-      <div className="modal-box">
+    <div className="modal-overlay" onClick={() => close && close()}>
+      <div className="modal-box" onClick={stop}>
 
         <h2>Register</h2>
 
@@ -55,13 +69,18 @@ function RegisterModal({ close, openLogin }) {
           onChange={(e) => setPassword(e.target.value)}
         />
 
+           <select onChange={(e) => setRole(e.target.value)}  value={role}  className="options">
+           <option value="User">User</option>
+           <option value="Admin">Admin</option>
+           </select>
+
         <button onClick={handleRegister}>Register</button>
 
-        <p className="switch-text" onClick={openLogin}>
+        <p className="switch-text" onClick={() => { close && close(); openLogin && openLogin(); }}>
           Already have an account?
         </p>
 
-        <button className="close-btn" onClick={close}>X</button>
+    <button type="button" className="close-btn" onClick={close}>Close</button>
 
       </div>
     </div>

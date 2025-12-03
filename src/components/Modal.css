@@ -96,6 +96,16 @@
   background: linear-gradient(90deg, #ff6600, #ff3300);
 }
 
+.options{
+  color: #131212;
+  background: linear-gradient(90deg, #ff8800, #ff4400);
+   border-radius: 12px;
+    width: 90%;
+  padding: 8px 10px;
+  border: none;
+}
+
+
 
 .switch-text {
   font-size: 14px;

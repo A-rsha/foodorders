@@ -12,6 +12,7 @@ function ProfilePage({ close }) {
   const handleLogout = () => {
     localStorage.removeItem("loggedUser");
     close();
+        window.location.reload();
   };
 
   if (!user) return null;
